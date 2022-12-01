@@ -1,0 +1,238 @@
+*{
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #333;
+}
+
+.presentation__text{
+	background-color: gainsboro;
+	width: 30em;
+	height: 5em;
+	font-size: 1.7em;
+	border-radius: 2em;
+	padding: 0.5em;
+}
+
+.container__question{
+ 	width: 50%;
+	height: 14em;
+	display: flex;
+}
+
+.container{
+  	height: 13em;
+	animation-name: eleccion;
+	animation-duration: 0.5s;
+	position: relative;
+	display: none;
+    }
+
+.character{
+ 	width: 13em;
+	height: 13em;
+ 	position: relative;	
+}
+
+.hat-1{
+ 	width: 7em;
+	height: 5em;
+	position: relative;
+	top: 0.5em;
+	left: -0.5em;
+	z-index: 1;
+ }
+
+.hat-large{
+    background-color: darkcyan;	
+    width: 3em;
+	height: 5em;
+	position: relative;
+	left: 1em;
+	top: 0.4em;
+	border-radius: 0 0 2em 2em;
+	transform: rotate(309deg);
+ 	animation-duration: 5s;
+    animation-iteration-count: infinite;
+ }
+
+.hat-red{
+	background-color: red;
+	width: 4em;
+	height: 0.5em;
+	position: relative;
+	top: 1em;
+	left: -0.5em;
+	border-radius: 2em;
+	box-shadow: 0 1.1em red, 0 2.1em red;
+}
+
+.hat-base{
+	background-image: linear-gradient(darkcyan 6px,blue 10px);
+	width: 5em;
+	height: 1em;
+	border-radius: 0 0 2em 2em;
+	position: relative;
+	top: -1em;
+	left: 1em;
+ }
+
+
+.skin-face{
+    background-image: repeating-linear-gradient(45deg, #bbcf18 5%,#0d0678 10%, #0d0678 20%, #bbcf18 20%);
+    width: 6em;
+	height: 6em;
+	position: relative;
+  }
+
+.face{
+	background-color: brown;
+	width: 5em;
+	height: 6em;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 2em;
+	position: relative;
+}
+
+.left-eye{
+	background-color: rgba(78, 45, 23, 1.0);
+	width: 0.8em;
+	height: 1.6em;
+	border-radius: 2em;
+	position: relative;
+	top: 1em;
+	left: 1.5em;
+}
+
+.right-eye{
+	background-color:  rgba(78, 45, 23, 1.0);
+	width: 0.8em;
+	height: 1.6em;
+	border-radius: 2em;
+	position: absolute;
+	top: 1em;
+	left: 3.5em;
+}
+
+.mouth{
+	background-image: linear-gradient(to top right, black 50%, white);
+	width: 2.9em;
+	height: 2em;
+	position: relative;
+	top: 1.4em;
+	left: 1.6em;
+	border-radius: 2em;
+ }
+
+.mouth-1{
+    background-color: rgba(0, 0, 0, 1.0);
+    width: 2.2em;
+    height: 1.2em;
+    border-radius: 0 0 2em 2em;
+    position: relative;
+    top: 0.5em;
+    left: 0.5em;
+     overflow: hidden;
+     transition: all 1.5s;
+     animation-name: speak;
+     animation-duration: 1.5s;
+     animation-iteration-count: infinite;
+ }
+ 
+
+.btn_reset{
+	background-color: darkcyan;
+	border-radius: 2em;
+	font-size: 1.3em;
+} 
+
+
+@keyframes concentracion{
+0%{
+left: 1em;
+transform: rotate(309deg);
+}
+
+50%{
+transform: rotate(360deg);
+left: 2em;
+}
+ 
+
+100%{
+  transform: rotate(309deg);
+  left: 1em;
+}
+
+}
+
+
+@keyframes speak{
+ 0%{
+    width: 2.2em;
+    height: 1.2em;
+
+ }
+  
+ 50%{
+     width: 1.5em;
+    height: 0.7em;
+
+ } 
+
+ 100%{
+    width: 2.2em;
+    height: 1.2em;
+ }
+}
+
+
+.len{
+	background-color: pink;
+	width: 2em;
+	height: 0.8em;
+	border-radius: 2em 2em 0 0;
+	position: relative;
+	top: 0.6em;
+	left: -0.5em; 
+  }
+
+
+
+
+@keyframes eleccion{
+	0%{
+      filter: opacity(0);
+      top: 2em;
+	}
+    
+    50%{
+     filter: opacity(50%);
+     top: 1em;
+    }
+
+	100%{
+     filter: opacity(100%);
+     	top: 0;
+	}
+}
+
+.ages{
+	background-color: #777;
+    border-radius: 3em;
+  	width: 20em;
+	height: 6em;
+	padding: 0.5em 1.5em;
+ }
+
+.date-age{
+	background-color: lightcoral;
+	border-radius: 3em;
+	width: 20em;
+	height: 6em;
+	margin-top: 2em;
+	padding: 0.5em 1.5em;
+}
