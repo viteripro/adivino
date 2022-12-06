@@ -1,11 +1,12 @@
+let conUserAge =   document.getElementById('container_age');
+let conDateAge =   document.getElementById('container_date-age');
 let userAge =   document.getElementById('age');
 let userDate =  document.getElementById('date-age');
 let parrafo1 =  document.createElement('p');
 let parrafo2 =  document.createElement('p');
 let container = document.getElementById('text_container');
+let talk = document.getElementById('talk');
 let button =    document.getElementById('btn');
-let text1 =     document.getElementById('text-1');
-const text2 =   document.getElementById('text-2');
 const press = document.getElementById('presentation');
 const con = document.getElementById('concen');
  
@@ -19,19 +20,13 @@ setTimeout(()=>{
 },9000)
 
 setTimeout(()=>{
-  container.style.display = 'block';  	
+  container.style.display = 'block'; 
+  talk.style.animationPlayState = 'paused';
 },12000)
 
 button.style.display = 'none';
 
  let fecha = new Date();
-
-
-setTimeout(()=>{
-	console.log('a')
-},4000)
-
-
 
   userAge.addEventListener('click',()=>{
   let userAge = document.getElementById('age');
@@ -41,18 +36,21 @@ setTimeout(()=>{
   setTimeout(()=>{
    press.innerHTML = 'dejame concentrar';
    con.style.animationName = 'concentracion';
+   talk.style.animationPlayState = 'running';
+   conUserAge.style.animationName = 'eleccion-hide';
   },1000)
 
-
    setTimeout(()=>{
-//     console.log('y');
+   conUserAge.style.visibility = 'hidden';
+  },1500)
+	  
+   setTimeout(()=>{
    con.style.animationName = '';
    press.innerHTML = `me indicas que tienes ${userAge} años asi que naciste en el año ${fecha.getFullYear() - userAge}`;
    parrafo1.innerHTML = `naciste en el año ${fecha.getFullYear() - userAge}`;
    button.style.display = 'inline-block';
   },5000)
    
-
   setTimeout(()=>{
    if(userAge >= 1 && userAge <= 20){
      press.innerHTML = 'eres demasiado joven';
@@ -76,37 +74,72 @@ setTimeout(()=>{
    	 press.innerHTML = 'debes ingresar un numero y no texto o simbolos';
    }
   },10000)
-
+	  
+  setTimeout(()=>{
+    talk.style.animationPlayState = 'paused';
+  },12000)
+	  
   })
-
-
 
 
   userDate.addEventListener('click',()=>{
   let userDate =  document.getElementById('date-age');
   userDate.appendChild(parrafo2);
-  console.log('click2');
-   userDate=prompt(`ingrese su fecha de nacimiento`)
+  userDate=prompt(`ingrese su fecha de nacimiento`)
 
+setTimeout(()=>{
+   press.innerHTML = 'dejame concentrar';
+   con.style.animationName = 'concentracion';
+   talk.style.animationPlayState = 'running';
+   conDateAge.style.animationName = 'eleccion-hide';
+  },1000)
 
+ setTimeout(()=>{
+   conDateAge.style.visibility = 'hidden';
+  },1500)
+	  
    setTimeout(()=>{
-
+   con.style.animationName = '';
    press.innerHTML = `me indicas que naciste en el año ${userDate} asi que tienes ${fecha.getFullYear() - userDate} años`;
    parrafo2.innerHTML = `tu tienes ${fecha.getFullYear() - userDate} años`
    button.style.display = 'inline-block';
-   },8000)
+   },5000)
 
+ setTimeout(()=>{
    if(userDate <= 1922){
      press.innerHTML = 'no pudiste haber nacido en ese año, es imposible que estes vivo o seguuramente me estas mintiendo';
+   }else if(userDate == fecha.getFullYear()){
+     press.innerHTML = 'no pudiste haber nacido en este año, entonces como es que puedes estar aqui escribiendo esto, debes estar mintiendo seguramente';
    }else if(userDate >= `${fecha.getFullYear() +1}`){
      press.innerHTML = 'aun no llegamos a ese año asi que aun no haz nacido';
    }else{
    	 console.log('error');
    }
+},10000)
 
-  })
+setTimeout(()=>{
+    talk.style.animationPlayState = 'paused';
+},12000)
+	  
+})
+
 
 button.addEventListener('click',()=>{
+setTimeout(()=>{
+conUserAge.style.animationName = 'eleccion-show';
+conDateAge.style.animationName = 'eleccion-show';
+conUserAge.style.visibility = 'visible';
+conDateAge.style.visibility = 'visible';
+},500)
+
+setTimeout(()=>{
+talk.style.animationPlayState = 'running';
+},1000)
+
+setTimeout(()=>{
+talk.style.animationPlayState = 'paused';
+},2000)	
+
 
 press.innerHTML = 'intentemoslo de nuevo';
 button.style.display = 'none';
