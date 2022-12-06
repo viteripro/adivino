@@ -147,8 +147,8 @@ body{
 	background-color: darkcyan;
 	border-radius: 2em;
 	font-size: 1.3em;
+        cursor: pointer;
 } 
-
 
 @keyframes concentracion{
 0%{
@@ -203,7 +203,7 @@ left: 2em;
 
 
 
-@keyframes eleccion{
+@keyframes eleccion-show{
 	0%{
       filter: opacity(0);
       top: 2em;
@@ -220,9 +220,28 @@ left: 2em;
 	}
 }
 
+
+@keyframes eleccion-hide{
+	0%{
+     filter: opacity(100%);
+     top: 0;
+	}
+
+	50%{
+	 filter: opacity(50%);
+	 top: 1em;	
+	}
+
+	100%{
+     filter: opacity(0);
+     top: 2em;
+	}
+}
+
+
 .ages{
 	background-color: #777;
-    border-radius: 3em;
+        border-radius: 3em;
   	width: 20em;
 	height: 6em;
 	padding: 0.5em 1.5em;
@@ -235,4 +254,14 @@ left: 2em;
 	height: 6em;
 	margin-top: 2em;
 	padding: 0.5em 1.5em;
+}
+
+.container_ages{
+ 	animation-name: ;
+	animation-duration: 0.5s;
+ }
+
+.container_dates{
+ 	animation-name: ;
+	animation-duration: 0.5s;
 }
