@@ -5,7 +5,7 @@ Es importante saber que esta no es la ultima versión ya que me falta pulir algu
 ## Autor
 **Luis Viteri**
 
-* [LinkedIn](https://www.linkedin.com/in/luis-viteri)
+* [LinkedIn](https://www.linkedin.com/in/luis-viteri-a47471243)
 * [Porfolio web](https://midominio.es/)
 
 ## Ver ejemplo en vivo
