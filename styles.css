@@ -10,11 +10,14 @@ body{
 
 .presentation__text{
 	background-color: gainsboro;
+	background-image: linear-gradient(45deg, gainsboro, #b2fff8);
 	width: 30em;
 	height: 5em;
 	font-size: 1.7em;
 	border-radius: 2em;
 	padding: 0.5em;
+	box-shadow: 0 0 2em white;
+
 }
 
 .container__question{
@@ -25,7 +28,7 @@ body{
 
 .container{
   	height: 13em;
-	animation-name: eleccion;
+	animation-name: eleccion-show;
 	animation-duration: 0.5s;
 	position: relative;
 	display: none;
