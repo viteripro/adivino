@@ -49,6 +49,14 @@ button.style.display = 'none';
    press.innerHTML = `me indicas que tienes ${userAge} años asi que naciste en el año ${fecha.getFullYear() - userAge}`;
    parrafo1.innerHTML = `naciste en el año ${fecha.getFullYear() - userAge}`;
    button.style.display = 'inline-block';
+	   
+   if(userAge >= 1){
+    press.innerHTML = `me indicas que tienes ${userAge} años asi que naciste en el año ${fecha.getFullYear() - userAge}`;
+  }else if (userAge == ''){
+    press.innerHTML = 'no me haz indicado tu edad';
+  }else{
+    press.innerHTML = 'hay un error';
+  }	   
   },5000)
    
   setTimeout(()=>{
@@ -66,10 +74,8 @@ button.style.display = 'none';
      press.innerHTML = 'es dificil que tengas esa edad, es muy increible';
    }else if(userAge >= 105){
      press.innerHTML = 'es imposible que tengas esa edad, debes estar mintiendo';
-   }else if(userAge <=0){
+   }else if(userAge <=0 || userAge -0){
      press.innerHTML = 'ese numero no coincide no tiene sentido, me haz enciado un numero negativo o un 0 y eso no tiene logica';
-   }else if(userAge = ''){
-     press.innerHTML = 'no me haz indicado tu edad';
    }else{
    	 press.innerHTML = 'debes ingresar un numero y no texto o simbolos';
    }
@@ -103,18 +109,50 @@ setTimeout(()=>{
    press.innerHTML = `me indicas que naciste en el año ${userDate} asi que tienes ${fecha.getFullYear() - userDate} años`;
    parrafo2.innerHTML = `tu tienes ${fecha.getFullYear() - userDate} años`
    button.style.display = 'inline-block';
-   },5000)
+	   
+   if(userDate >= fecha.getFullYear()){
+     press.innerHTML = 'Debes estar equivocado aun no llegamos a ese año';
+   }else if(userDate >= fecha.getFullYear() -100){
+     press.innerHTML = `me indicaste que naciste en el año ${userDate}, asi que tienes ${fecha.getFullYear() - userDate} años`; 
+   }else if(userDate == ''){
+    press.innerHTML = 'esta vacio, no has ingresado un año';
+   }else{
+    press.innerHTML = 'hay un error';
+  }	   
+},5000)
 
  setTimeout(()=>{
-   if(userDate <= 1922){
-     press.innerHTML = 'no pudiste haber nacido en ese año, es imposible que estes vivo o seguuramente me estas mintiendo';
+    if(userDate <= fecha.getFullYear() -100 && userDate >=1){
+     press.innerHTML = `no pudiste haber nacido en el año ${userDate}, es imposible que estes vivo o seguramente me estas mintiendo, porque deberias tener ${fecha.getFullYear() - userDate} años`;
+   }else if(userDate <=0){
+     press.innerHTML = `ese año no es valido me indicaste ${userDate} y ese es un numero nulo o negativo`;
    }else if(userDate == fecha.getFullYear()){
-     press.innerHTML = 'no pudiste haber nacido en este año, entonces como es que puedes estar aqui escribiendo esto, debes estar mintiendo seguramente';
-   }else if(userDate >= `${fecha.getFullYear() +1}`){
-     press.innerHTML = 'aun no llegamos a ese año asi que aun no haz nacido';
-   }else{
-   	 console.log('error');
-   }
+     press.innerHTML = `no pudiste haber nacido en el año ${fecha.getFullYear()}, entonces como es que puedes estar aqui escribiendo esto, debes estar mintiendo seguramente`;
+   }else if(userDate >= fecha.getFullYear() +1){
+     press.innerHTML = `aun no llegamos al año ${userDate} asi que aun no haz nacido, estas mintiendome`;  
+   }else if(userDate <= fecha.getFullYear() -1  && userDate >= fecha.getFullYear() -10){
+     press.innerHTML = 'Eres demasiado joven estas llegando a tu primera decada de existencia';
+   }else if(userDate <= fecha.getFullYear() -11 && userDate >= fecha.getFullYear() -20){
+     press.innerHTML = 'Eres joven y estas en la epoca de la adolescencia, tienes mucho por aprender';
+   }else if(userDate <= fecha.getFullYear() -21 && userDate >= fecha.getFullYear() -30){
+     press.innerHTML = 'Eres joven aun, aprovecha tu edad y diviertete';
+   }else if(userDate <= fecha.getFullYear() -31 && userDate >= fecha.getFullYear() -40){
+     press.innerHTML = 'Talvez ya te encuentres trabajando o estas casado';
+   }else if(userDate <= fecha.getFullYear() -41 && userDate >= fecha.getFullYear() -50){
+     press.innerHTML = 'Estas muy cerca de llegar a los 50 años y seguramente tienes canas';
+   }else if(userDate <= fecha.getFullYear() -51 && userDate >= fecha.getFullYear() -60){
+     press.innerHTML = 'Tienes mas de 50 años y seguramente tienes mucho conocimiento adquirido';
+   }else if(userDate <= fecha.getFullYear() -61 && userDate >= fecha.getFullYear() -70){
+     press.innerHTML = 'Estoy seguro que tienes mucho conocimiento y algunas canas';
+   }else if(userDate <= fecha.getFullYear() -71 && userDate >= fecha.getFullYear() -80){
+     press.innerHTML = 'Ya estas casado o tienes hijos si naciste en ese año';
+   }else if(userDate <= fecha.getFullYear() -81 && userDate >= fecha.getFullYear() -90){
+     press.innerHTML = 'Es increible que hayas nacido en ese año, debes de tener un buen estado de salud';
+   }else if(userDate <= fecha.getFullYear() -91 && userDate >= fecha.getFullYear() -400){
+     press.innerHTML = 'En serio naciste en ese año? Debes estar mintiendo o eres una persona extremadamente saludable';
+   } else{
+     press.innerHTML = `me indicaste ${userDate} y no acepto texto o simbolos, debes enviar un numero`;
+    } 
 },10000)
 
 setTimeout(()=>{
@@ -178,4 +216,3 @@ if(parrafo1.innerHTML === ''){
   console.log('ha ocurrido un error');
 }
 })
- 
