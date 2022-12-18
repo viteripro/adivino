@@ -92,7 +92,7 @@ body{
   }
 
 .face{
-	background-color: linear-gradient(to bottom left,white 2%, brown 40%);
+	background-image: linear-gradient(to bottom left,white 2%, brown 40%);
 	width: 5em;
 	height: 6em;
 	margin-left: auto;
