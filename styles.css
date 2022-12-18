@@ -88,7 +88,7 @@ body{
   }
 
 .face{
-	background-color: brown;
+	background-color: linear-gradient(to bottom left,white 2%, brown 40%);
 	width: 5em;
 	height: 6em;
 	margin-left: auto;
@@ -240,7 +240,7 @@ left: 2em;
 
 
 .ages{
-	background-color: #777;
+	background-color: #1c90cf;
         border-radius: 3em;
   	width: 20em;
 	height: 6em;
@@ -248,7 +248,7 @@ left: 2em;
  }
 
 .date-age{
-	background-color: lightcoral;
+	background-color: #d92929;
 	border-radius: 3em;
 	width: 20em;
 	height: 6em;
@@ -264,4 +264,17 @@ left: 2em;
 .container_dates{
  	animation-name: ;
 	animation-duration: 0.5s;
+}
+
+@media screen and (max-width: 400px){
+ .container__question{
+ 	display: flex;
+}
+
+.character{
+ 	width: 13em;
+	height: 13em;
+ 	position: relative;	
+ 	margin-left: 5em;
+}
 }
