@@ -1,6 +1,5 @@
 ## Descripción
 Hice mi primer programa hecho con html, css y javascript y se trata de un programa en el cual te comunicas con un adivino que te responde correctamente en que año naciste o cual es tu edad mediante un algoritmo matematico que hice por medio de Javascript.
-Es importante saber que esta no es la ultima versión ya que me falta pulir algunas cosas pero cumple con us objetivo principal.
 
 ## Autor
 **Luis Viteri**
